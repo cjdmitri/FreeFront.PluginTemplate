@@ -8,8 +8,11 @@
 5. Добавьте класс **PluginService : IPluginService** (Реализующий интерфейс IPluginService)
 6. Добавьте класс **Plugin : IPlugin** (Реализующий интерфейс IPlugin). В данном классе находится основная информация о плагине и метод инициализации
 	6.1. В классе Plugin укажите тип плагина. 
-		[PluginType.Api] - простой плагин, с API контроллером
+```
+		PluginType.Api - простой плагин, с API контроллером
+		PluginType.Service - простой плагин, с API контроллером
 		PluginType.Universal - универсальнеый плагин, для которого будет создана отдельная страница в БД (/admin/plugins/{idPlugin})
+```
 7. Создайте класс контроллера.
 	7.1. Укажите Route("api/v{version:apiVersion}/plugins/templateapi")
 	7.2. Укажите ApiController
